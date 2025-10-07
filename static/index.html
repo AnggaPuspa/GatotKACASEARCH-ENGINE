@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <script>
       tailwind.config = {
         darkMode: 'class',
@@ -18,11 +19,11 @@
               sans: ['Poppins', 'ui-sans-serif', 'system-ui', 'sans-serif'],
             },
             colors: {
-              primary: '#0EA5E9', // sky-500
-              secondary: '#22C55E', // green-500
-              accent: '#F59E0B', // amber-500
-              dark: '#1E293B', // slate-800
-              light: '#F8FAFC', // slate-50
+              primary: '#0EA5E9', 
+              secondary: '#22C55E', 
+              accent: '#F59E0B',
+              dark: '#1E293B', 
+              light: '#F8FAFC', 
             },
             animation: {
               'spin-slow': 'spin 2s linear infinite',
@@ -77,66 +78,9 @@
         ]
       }
     </script>
-    <style>
-        /* Batik pattern overlay for hero section */
-        .batik-pattern {
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23ffffff' fill-opacity='0.08'%3E%3Cpath d='M0 0h40v40H0V0zm40 40h40v40H40V40zm0-40h2l-2 2V0zm0 4l4-4h2l-6 6V4zm0 4l8-8h2L40 10V8zm0 4L52 0h2L40 14v-2zm0 4L56 0h2L40 18v-2zm0 4L60 0h2L40 22v-2zm0 4L64 0h2L40 26v-2zm0 4L68 0h2L40 30v-2zm0 4L72 0h2L40 34v-2zm0 4L76 0h2L40 38v-2zm0 4L80 0v2L42 40h-2zm4 0L80 4v2L46 40h-2zm4 0L80 8v2L50 40h-2zm4 0l28-28v2L54 40h-2zm4 0l24-24v2L58 40h-2zm4 0l20-20v2L62 40h-2zm4 0l16-16v2L66 40h-2zm4 0l12-12v2L70 40h-2zm4 0l8-8v2l-6 6h-2zm4 0l4-4v2l-2 2h-2z'/%3E%3C/g%3E%3C/svg%3E");
-        }
-        
-        .search-container {
-            background: linear-gradient(135deg, #0EA5E9 0%, #7C3AED 100%);
-        }
-        
-        .result-item {
-            transition: all 0.2s ease-out;
-        }
-        
-        .result-item:hover {
-            transform: translateY(-2px);
-        }
-        
-        .loading {
-            display: none;
-        }
-        
-        .loading.show {
-            display: block;
-        }
-        
-        mark {
-            background-color: rgba(251, 191, 36, 0.4);
-            padding: 0 0.1rem;
-            border-radius: 0.25rem;
-        }
-        
-        .dark mark {
-            background-color: rgba(251, 191, 36, 0.25);
-            color: rgba(255, 255, 255, 0.9);
-        }
-        
-        .glass-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 1rem;
-        }
-        
-        /* Custom select arrow */
-        .select-arrow {
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%231E293B'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
-            background-size: 1rem;
-            background-position: center right 1rem;
-            background-repeat: no-repeat;
-        }
-        
-        .dark .select-arrow {
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23F8FAFC'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
-        }
-    </style>
 </head>
 <body class="bg-slate-50 dark:bg-slate-900 min-h-screen font-sans text-slate-800 dark:text-slate-100">
-  <!-- Dark Mode Toggle -->
+  <!-- Dark Mode  -->
   <div class="absolute top-4 right-4 z-50">
     <button id="darkModeToggle" aria-label="Toggle dark mode" class="p-2 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200 hover:bg-slate-300 dark:hover:bg-slate-600 transition-colors">
       <i class="fas fa-sun dark:hidden"></i>
@@ -144,7 +88,7 @@
     </button>
   </div>
 
-  <!-- Header dengan gradient dan batik pattern -->
+  <!-- Header -->
   <header class="search-container batik-pattern text-white py-16 md:py-20 relative">
     <div class="max-w-5xl mx-auto px-4 sm:px-6">
       <div class="text-center mb-10">
@@ -154,7 +98,7 @@
         <p class="text-white/80 text-lg md:text-xl">Temukan informasi tentang sejarah dan wisata Indonesia</p>
       </div>
       
-      <!-- Search Box Container (Elevated Card) -->
+      <!-- Search Box  -->
       <div class="relative -mb-20">
         <div class="bg-white dark:bg-slate-800 rounded-2xl shadow-xl p-3 md:p-4 mx-auto max-w-3xl">
           <div class="flex flex-col md:flex-row gap-3">
@@ -181,7 +125,6 @@
                   title="Filter berdasarkan kategori" 
                   class="w-full px-4 py-3 md:py-3.5 rounded-xl text-base md:text-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-100 focus:outline-none focus:ring-4 focus:ring-sky-300 dark:focus:ring-sky-700/50 appearance-none select-arrow pr-10">
                   <option value="Semua">Semua Kategori</option>
-                  <!-- Categories loaded dynamically -->
                 </select>
               </div>
             </div>
@@ -202,8 +145,6 @@
   <!-- Main Content -->
   <main class="pt-24 pb-12">
     <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      
-      <!-- Quick Search Chips -->
       <div class="overflow-x-auto no-scrollbar pb-4 -mt-2">
         <div class="flex flex-nowrap gap-2 justify-center">
           <button 
@@ -296,8 +237,6 @@
           Selanjutnya<i class="fas fa-chevron-right ml-2"></i>
         </button>
       </div>
-
-      <!-- Analysis Results Modal -->
       <div 
         id="analysisModal" 
         class="hidden fixed inset-0 bg-black/50 dark:bg-black/70 z-50 flex items-center justify-center backdrop-blur-sm" 
@@ -316,7 +255,6 @@
             </button>
           </div>
           <div id="analysisContent" class="space-y-6">
-            <!-- Analysis content will be inserted here -->
           </div>
         </div>
       </div>
@@ -400,582 +338,6 @@
     </div>
   </footer>
 
-<script>
-// Global state
-let searchStartTime = 0;
-let currentPage = 1;
-let totalPages = 1;
-let currentQuery = '';
-let currentCategory = 'Semua';
-const RESULTS_PER_PAGE = 20;
-
-// Initialize the application
-document.addEventListener('DOMContentLoaded', function() {
-  loadCategories();
-  document.getElementById("q").focus();
-  checkDatabaseStatus();
-  initDarkMode();
-  
-  // Add keyboard listeners for pagination
-  document.addEventListener('keydown', function(e) {
-    // Only handle when not in input field
-    if (e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA' && e.target.tagName !== 'SELECT') {
-      if (e.key === 'ArrowLeft') {
-        const prevBtn = document.getElementById('prevPage');
-        if (!prevBtn.disabled) changePage(-1);
-      } else if (e.key === 'ArrowRight') {
-        const nextBtn = document.getElementById('nextPage');
-        if (!nextBtn.disabled) changePage(1);
-      }
-    }
-  });
-});
-
-// Dark mode initialization
-function initDarkMode() {
-  const darkModeToggle = document.getElementById('darkModeToggle');
-  
-  // Check for saved theme or system preference
-  if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    document.documentElement.classList.add('dark');
-  } else {
-    document.documentElement.classList.remove('dark');
-  }
-  
-  // Toggle dark mode
-  darkModeToggle.addEventListener('click', function() {
-    if (document.documentElement.classList.contains('dark')) {
-      document.documentElement.classList.remove('dark');
-      localStorage.theme = 'light';
-    } else {
-      document.documentElement.classList.add('dark');
-      localStorage.theme = 'dark';
-    }
-  });
-}
-
-// Reset search function
-function resetSearch() {
-  document.getElementById("q").value = '';
-  document.getElementById("category").value = 'Semua';
-  hideElement("noResults");
-  hideElement("results");
-  hideElement("searchStats");
-  hideElement("pagination");
-  showElement("welcome");
-  document.getElementById("q").focus();
-}
-
-// Handle Enter key press
-function handleEnter(event) {
-  if (event.key === 'Enter') {
-    doSearch();
-  }
-}
-
-// Quick search function
-function quickSearch(query) {
-  document.getElementById("q").value = query;
-  document.getElementById("category").value = 'Semua';
-  currentPage = 1;
-  doSearch();
-}
-
-// Check database status on load
-async function checkDatabaseStatus() {
-  try {
-    const res = await fetch('/stats');
-    const data = await res.json();
-    
-    if (data.error) {
-      displayDatabaseError();
-    } else if (data.total_documents === 0) {
-      displayDatabaseEmpty();
-    }
-  } catch (error) {
-    console.error('Database status check error:', error);
-  }
-}
-
-// Display database error
-function displayDatabaseError() {
-  const welcome = document.getElementById("welcome");
-  welcome.innerHTML = `
-    <div class="text-center py-8">
-      <div class="text-7xl mb-6 text-red-500 dark:text-red-400">
-        <i class="fas fa-database"></i>
-      </div>
-      <h2 class="text-2xl font-bold text-red-600 dark:text-red-500 mb-4">Database belum diindeks</h2>
-      <p class="text-slate-600 dark:text-slate-400 mb-6 max-w-md mx-auto">Silakan jalankan proses indexing terlebih dahulu</p>
-      <button onclick="reindexDatabase()" 
-        class="px-6 py-3 bg-red-600 text-white rounded-xl hover:bg-red-700 shadow-md hover:shadow-lg transition-all"
-        aria-label="Reindex database">
-        <i class="fas fa-sync-alt mr-2"></i>Reindex Database
-      </button>
-    </div>
-  `;
-}
-
-// Display empty database message
-function displayDatabaseEmpty() {
-  const welcome = document.getElementById("welcome");
-  welcome.innerHTML = `
-    <div class="text-center py-8">
-      <div class="text-7xl mb-6 text-amber-500 dark:text-amber-400">
-        <i class="fas fa-exclamation-circle"></i>
-      </div>
-      <h2 class="text-2xl font-bold text-amber-600 dark:text-amber-500 mb-4">Database kosong</h2>
-      <p class="text-slate-600 dark:text-slate-400 mb-6 max-w-md mx-auto">Belum ada dokumen yang diindeks</p>
-      <button onclick="reindexDatabase()" 
-        class="px-6 py-3 bg-amber-600 text-white rounded-xl hover:bg-amber-700 shadow-md hover:shadow-lg transition-all"
-        aria-label="Reindex database">
-        <i class="fas fa-sync-alt mr-2"></i>Reindex Database
-      </button>
-    </div>
-  `;
-}
-
-// Load available categories
-async function loadCategories() {
-  try {
-    const res = await fetch('/categories');
-    const data = await res.json();
-    
-    if (!data.error && data.categories) {
-      const categorySelect = document.getElementById("category");
-      const currentValue = categorySelect.value;
-      
-      // Keep the "Semua" option
-      categorySelect.innerHTML = '<option value="Semua">Semua Kategori</option>';
-      
-      // Add categories from the API
-      data.categories.forEach(category => {
-        if (category) {  // Ensure not empty
-          const option = document.createElement('option');
-          option.value = category;
-          option.textContent = category;
-          categorySelect.appendChild(option);
-        }
-      });
-      
-      // Try to restore selected value
-      if (currentValue) {
-        categorySelect.value = currentValue;
-      }
-    }
-  } catch (error) {
-    console.error('Error loading categories:', error);
-  }
-}
-
-// Show/hide elements
-function showElement(id) {
-  document.getElementById(id).classList.remove('hidden');
-}
-
-function hideElement(id) {
-  document.getElementById(id).classList.add('hidden');
-}
-
-function showLoading() {
-  document.getElementById("loading").classList.add('show');
-}
-
-function hideLoading() {
-  document.getElementById("loading").classList.remove('show');
-}
-
-// Reindex the database
-async function reindexDatabase() {
-  try {
-    const confirmed = confirm("Yakin ingin mengindeks ulang database? Proses ini mungkin memakan waktu beberapa saat.");
-    if (!confirmed) return;
-    
-    // Display loading state
-    document.getElementById('reindexBtn').innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Reindexing...';
-    document.getElementById('reindexBtn').disabled = true;
-    
-    const res = await fetch('/reindex');
-    const data = await res.json();
-    
-    alert(`Proses reindexing dimulai dari folder: ${data.folder}`);
-    
-    // Reset UI after a delay to allow background processing
-    setTimeout(() => {
-      document.getElementById('reindexBtn').innerHTML = '<i class="fas fa-sync-alt mr-2"></i> Reindex Database';
-      document.getElementById('reindexBtn').disabled = false;
-      loadCategories(); // Refresh categories after reindexing
-    }, 3000);
-  } catch (error) {
-    console.error('Reindex error:', error);
-    alert('Terjadi kesalahan saat mengindeks ulang database.');
-    document.getElementById('reindexBtn').innerHTML = '<i class="fas fa-sync-alt mr-2"></i> Reindex Database';
-    document.getElementById('reindexBtn').disabled = false;
-  }
-}
-
-// Analyze corpus
-async function analyzeCorpus() {
-  try {
-    // Display loading state
-    document.getElementById('analyzeBtn').innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Menganalisis...';
-    document.getElementById('analyzeBtn').disabled = true;
-    
-    const res = await fetch('/analyze');
-    if (!res.ok) {
-      throw new Error(`HTTP error: ${res.status}`);
-    }
-    
-    const data = await res.json();
-    displayAnalysis(data);
-    
-    // Reset UI
-    document.getElementById('analyzeBtn').innerHTML = '<i class="fas fa-chart-bar mr-2"></i> Analisis Korpus';
-    document.getElementById('analyzeBtn').disabled = false;
-  } catch (error) {
-    console.error('Analysis error:', error);
-    alert('Terjadi kesalahan saat menganalisis korpus.');
-    document.getElementById('analyzeBtn').innerHTML = '<i class="fas fa-chart-bar mr-2"></i> Analisis Korpus';
-    document.getElementById('analyzeBtn').disabled = false;
-  }
-}
-
-// Display analysis results
-function displayAnalysis(data) {
-  const content = document.getElementById('analysisContent');
-  
-  if (data.error) {
-    content.innerHTML = `
-      <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-lg text-red-700 dark:text-red-400">
-        <p><i class="fas fa-exclamation-circle mr-2"></i>${data.error}</p>
-      </div>
-    `;
-  } else {
-    // Format the analysis data
-    let html = `
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="bg-sky-50 dark:bg-sky-900/20 p-5 rounded-lg">
-          <h4 class="font-semibold mb-3 text-sky-800 dark:text-sky-300">Statistik Dokumen</h4>
-          <p class="mb-2"><span class="font-medium">Total dokumen:</span> ${data.total_documents}</p>
-          <div class="mt-4">
-            <h5 class="font-medium mb-2 text-sky-700 dark:text-sky-400">Distribusi Kategori:</h5>
-            <ul class="space-y-2">
-    `;
-    
-    // Calculate the total for percentage
-    const totalCount = data.categories.reduce((sum, cat) => sum + cat.count, 0);
-    
-    data.categories.forEach(cat => {
-      const percentage = (cat.count / totalCount * 100).toFixed(1);
-      const barWidth = `${percentage}%`;
-      const category = cat.category || 'Tanpa kategori';
-      
-      // Different colors for different categories
-      let colorClass = 'bg-sky-500';
-      if (category.toLowerCase().includes('wisata')) {
-        colorClass = 'bg-green-500';
-      } else if (category.toLowerCase().includes('budaya')) {
-        colorClass = 'bg-purple-500';
-      } else if (category.toLowerCase().includes('sejarah')) {
-        colorClass = 'bg-blue-500';
-      }
-      
-      html += `
-        <li>
-          <div class="flex items-center justify-between mb-1">
-            <span class="font-medium text-slate-700 dark:text-slate-300">${category}</span>
-            <span class="text-xs font-medium text-slate-600 dark:text-slate-400">${cat.count} (${percentage}%)</span>
-          </div>
-          <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2.5">
-            <div class="${colorClass} h-2.5 rounded-full" style="width: ${barWidth}"></div>
-          </div>
-        </li>`;
-    });
-    
-    html += `
-            </ul>
-          </div>
-        </div>
-        
-        <div class="bg-green-50 dark:bg-green-900/20 p-5 rounded-lg">
-          <h4 class="font-semibold mb-3 text-green-800 dark:text-green-300">Kata Paling Sering Muncul</h4>
-          <ul class="space-y-2">
-    `;
-    
-    // Find the max count for scaling
-    const maxCount = Math.max(...data.top_words.map(w => w.count));
-    
-    data.top_words.forEach(word => {
-      const percentage = (word.count / maxCount * 100).toFixed(0);
-      const barWidth = `${percentage}%`;
-      
-      html += `
-        <li>
-          <div class="flex items-center justify-between mb-1">
-            <span class="font-mono text-slate-700 dark:text-slate-300">${word.word}</span>
-            <span class="text-xs font-medium text-slate-600 dark:text-slate-400">${word.count} kali</span>
-          </div>
-          <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2.5">
-            <div class="bg-green-500 h-2.5 rounded-full" style="width: ${barWidth}"></div>
-          </div>
-        </li>`;
-    });
-    
-    html += `
-          </ul>
-        </div>
-      </div>
-    `;
-    
-    content.innerHTML = html;
-  }
-  
-  // Show the modal
-  showElement('analysisModal');
-  
-  // Set focus for accessibility - first focusable element in modal
-  setTimeout(() => {
-    document.querySelector('#analysisModal button').focus();
-  }, 100);
-  
-  // Trap focus in modal
-  const modal = document.getElementById('analysisModal');
-  const focusableElements = modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
-  const firstElement = focusableElements[0];
-  const lastElement = focusableElements[focusableElements.length - 1];
-  
-  modal.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-      closeAnalysisModal();
-    }
-    
-    if (e.key === 'Tab') {
-      if (e.shiftKey) {
-        if (document.activeElement === firstElement) {
-          lastElement.focus();
-          e.preventDefault();
-        }
-      } else {
-        if (document.activeElement === lastElement) {
-          firstElement.focus();
-          e.preventDefault();
-        }
-      }
-    }
-  });
-}
-
-// Close analysis modal
-function closeAnalysisModal() {
-  hideElement('analysisModal');
-  document.getElementById('analyzeBtn').focus(); // Return focus
-}
-
-// Pagination handler
-function changePage(delta) {
-  const newPage = currentPage + delta;
-  if (newPage >= 1 && newPage <= totalPages) {
-    currentPage = newPage;
-    doSearch(false); // Don't reset the page number
-  }
-}
-
-// Update pagination UI
-function updatePaginationUI() {
-  document.getElementById("currentPage").textContent = currentPage;
-  document.getElementById("totalPages").textContent = totalPages;
-  
-  const prevBtn = document.getElementById("prevPage");
-  const nextBtn = document.getElementById("nextPage");
-  
-  prevBtn.disabled = currentPage <= 1;
-  nextBtn.disabled = currentPage >= totalPages;
-  
-  // Show pagination only if there's more than one page
-  if (totalPages > 1) {
-    showElement("pagination");
-  } else {
-    hideElement("pagination");
-  }
-}
-
-// Main search function
-async function doSearch(resetPage = true) {
-  const q = document.getElementById("q").value.trim();
-  const category = document.getElementById("category").value;
-  
-  if (!q) {
-    alert("Silakan masukkan kata kunci pencarian");
-    return;
-  }
-
-  // Update state
-  currentQuery = q;
-  currentCategory = category;
-  if (resetPage) currentPage = 1;
-
-  // Start loading
-  searchStartTime = Date.now();
-  showLoading();
-  hideElement("welcome");
-  hideElement("results");
-  hideElement("noResults");
-  hideElement("searchStats");
-  hideElement("pagination");
-
-  try {
-    // Build search URL with parameters
-    const params = new URLSearchParams({
-      q: q,
-      limit: RESULTS_PER_PAGE,
-      page: currentPage
-    });
-    
-    if (category !== 'Semua') {
-      params.append('category', category);
-    }
-    
-    const url = `/search?${params.toString()}`;
-    const res = await fetch(url);
-    
-    if (!res.ok) {
-      throw new Error(`HTTP error! status: ${res.status}`);
-    }
-    
-    const data = await res.json();
-    const searchTime = Date.now() - searchStartTime;
-    
-    // Update pagination state
-    totalPages = data.pages || 1;
-    
-    hideLoading();
-    displayResults(data, q, searchTime);
-    updatePaginationUI();
-    
-  } catch (error) {
-    hideLoading();
-    console.error('Search error:', error);
-    displayError("Terjadi kesalahan saat mencari. Silakan coba lagi.");
-  }
-}
-
-// Display search results
-function displayResults(data, query, searchTime) {
-  const resultsBox = document.getElementById("results");
-  resultsBox.innerHTML = "";
-
-  if (!data.results || data.results.length === 0) {
-    showElement("noResults");
-    return;
-  }
-
-  // Show search stats
-  document.getElementById("resultCount").textContent = data.total;
-  document.getElementById("queryText").textContent = query;
-  document.getElementById("searchTime").textContent = searchTime;
-  showElement("searchStats");
-
-  // Calculate starting result number for pagination
-  const startIndex = (currentPage - 1) * RESULTS_PER_PAGE;
-
-  // Display results
-  data.results.forEach((result, index) => {
-    const resultNumber = startIndex + index + 1;
-    const item = document.createElement("div");
-    item.className = "result-item bg-white dark:bg-slate-800 p-6 rounded-xl shadow-sm border border-slate-200/70 dark:border-slate-700/50 hover:shadow-md";
-    
-    const snippet = result.snippet || "Tidak ada preview tersedia.";
-    const cleanSnippet = snippet.replace(/<\/?mark>/g, (match) => 
-      match === '<mark>' ? '<mark>' : '</mark>'
-    );
-    
-    // Determine category badge color
-    let categoryClass = "bg-slate-100 text-slate-600 dark:bg-slate-700 dark:text-slate-300";
-    if (result.category) {
-      const category = result.category.toLowerCase();
-      if (category.includes('sejarah')) {
-        categoryClass = "bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300";
-      } else if (category.includes('wisata')) {
-        categoryClass = "bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-300";
-      } else if (category.includes('budaya')) {
-        categoryClass = "bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-300";
-      } else if (category.includes('tradisi')) {
-        categoryClass = "bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300";
-      }
-    }
-    
-    item.innerHTML = `
-      <div class="flex items-start gap-4">
-        <div class="hidden sm:flex shrink-0">
-          <div class="w-12 h-12 bg-gradient-to-br from-sky-400 to-indigo-500 dark:from-sky-500 dark:to-indigo-600 rounded-lg flex items-center justify-center shadow-sm">
-            <span class="text-white font-semibold text-lg">${resultNumber}</span>
-          </div>
-        </div>
-        <div class="flex-1">
-          <div class="flex flex-wrap items-center gap-3 mb-3">
-            <span class="inline-flex sm:hidden items-center justify-center w-6 h-6 bg-sky-100 dark:bg-sky-900/50 text-sky-600 dark:text-sky-400 rounded-full text-xs font-semibold">
-              ${resultNumber}
-            </span>
-            <h3 class="font-bold text-xl text-slate-800 dark:text-slate-100 hover:text-sky-600 dark:hover:text-sky-400 transition-colors line-clamp-2">
-              ${escapeHtml(result.title)}
-            </h3>
-            <span class="${categoryClass} px-2.5 py-1 rounded-full text-xs font-medium">
-              ${result.category || "Lainnya"}
-            </span>
-          </div>
-          <p class="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">${cleanSnippet}</p>
-          <div class="flex items-center justify-between">
-            <div>
-              ${result.url ? `
-                <a href="${escapeHtml(result.url)}" target="_blank" 
-                  class="inline-flex items-center text-sky-600 dark:text-sky-400 hover:text-sky-800 dark:hover:text-sky-300 font-medium text-sm transition-colors"
-                  aria-label="Baca dokumen ${escapeHtml(result.title)}">
-                  <i class="fas fa-external-link-alt mr-2"></i>
-                  Baca selengkapnya
-                </a>
-              ` : ''}
-            </div>
-            <span class="text-xs text-slate-500 dark:text-slate-400 font-mono">
-              Skor: <span class="font-semibold">${parseFloat(result.score).toFixed(2)}</span>
-            </span>
-          </div>
-        </div>
-      </div>
-    `;
-    
-    resultsBox.appendChild(item);
-  });
-
-  showElement("results");
-}
-
-// Display error message
-function displayError(message) {
-  const resultsBox = document.getElementById("results");
-  resultsBox.innerHTML = `
-    <div class="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800/30 rounded-xl p-6 text-center">
-      <div class="text-5xl mb-4 text-red-500 dark:text-red-400">
-        <i class="fas fa-exclamation-triangle"></i>
-      </div>
-      <h3 class="text-lg font-semibold text-red-800 dark:text-red-300 mb-2">Terjadi Kesalahan</h3>
-      <p class="text-red-600 dark:text-red-400">${message}</p>
-      <button onclick="location.reload()" 
-              class="mt-4 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors"
-              aria-label="Muat ulang halaman">
-        <i class="fas fa-redo mr-2"></i>Muat Ulang Halaman
-      </button>
-    </div>
-  `;
-  showElement("results");
-}
-
-// Utility function to escape HTML
-function escapeHtml(text) {
-  if (!text) return '';
-  const div = document.createElement('div');
-  div.textContent = text;
-  return div.innerHTML;
-}
-</script>
+<script src="main.js"></script>
 </body>
 </html>
